@@ -1,0 +1,14 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "A todo app that is connected to a real database (firebase)",
+  "main": "app.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss assets/css/main.css -w"
+  },
+  "author": "Kwaame Ofori-Adjekum",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

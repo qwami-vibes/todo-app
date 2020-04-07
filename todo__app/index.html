@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>Todo || App</title>
+</head>
+<body>
+
+    <div class="container">
+    </div>
+    <main class="main">
+        <nav class="nav">
+            <div class="nav__brand">
+                <h3 class="heading-primary gradient-primary">todo app</h3>
+            </div>
+            <div class="nav__icon">
+                <svg >
+                    <use class="nav__icon--svg" xlink:href='assets/icons/sprite.svg#moon'></use>
+                </svg>
+            </div>
+        </nav>
+        <div class="table">
+            <table class="table__container">
+                <tr class="table__head">
+                    <th class="gradient-primary">author</th>
+                    <th class="gradient-primary">title</th>
+                    <th class="gradient-primary">created</th>
+                </tr>
+            </table>
+        </div>
+        <form action="#" class="form">
+            <div class="form__groups">
+                <input class="form__groups--input" type="text" placeholder="Enter Author" name="author" id="input-author" required>
+                <label for="author" class="form__groups--label gradient-primary">enter author</label>
+            </div>
+            <div class="form__groups">
+                <input class="form__groups--input" type="text" placeholder="Enter Todo Title" name="title" id="input-title" required>
+                <label for="title" class="form__groups--label gradient-primary">enter todo title</label>
+            </div>
+            <div class="form__submit">
+                <button type="submit" class="btn btn-submit disabled" disabled>
+                    <span class="btn-submit-visible">submit</span>
+                    <span class="btn-submit-invisible">add</span>
+                </button>
+            </div>
+        </form>
+        <div class="details">
+            <span class="gradient-primary">made by kwaame ofori-adjekum &amp; powered by firebase (firestore)</span>
+        </div>
+    </main>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCsUSX_2FSTrq7qaeRi5QfVbRikT9hMooQ",
+            authDomain: "todo-app-7009b.firebaseapp.com",
+            databaseURL: "https://todo-app-7009b.firebaseio.com",
+            projectId: "todo-app-7009b",
+            storageBucket: "todo-app-7009b.appspot.com",
+            messagingSenderId: "920032554689",
+            appId: "1:920032554689:web:ef6c7a232670970dc3ae40",
+            measurementId: "G-MVH9E1CCFL"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const db = firebase.firestore();
+    </script>
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
